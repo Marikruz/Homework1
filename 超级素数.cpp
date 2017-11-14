@@ -3,8 +3,8 @@ int main(){
   int n,i,m,t,p,sum=0,max=0,b,c,d,k,s=0;
   int judge(int x),he(int y),ji(int z),ping(int x);
   for (n=100;n<10000;n++){
-    if (judge(n)==0){//±¾ÉíÎªËØÊı 
-      if (n%1000==n){//ÈıÎ»Êı 
+    if (judge(n)==0){//æœ¬èº«ä¸ºç´ æ•° 
+      if (n%1000==n){//ä¸‰ä½æ•° 
 		if (judge(he(n))==0 && judge(ji(n))==0 && judge(ping(n))==0){
 		  max=n;
           sum+=1;
@@ -12,7 +12,7 @@ int main(){
         }
         else max=max;
       }  
-      else{//ËÄÎ»Êı 
+      else{//å››ä½æ•° 
       	if (judge(he(n))==0 && judge(ji(n))==0 && judge(ping(n))==0){
       	  max=n;
       	  sum+=1;
@@ -23,7 +23,7 @@ int main(){
 	}
     else max=max;
   }
-  printf("³¬¼¶ËØÊıµÄ¸öÊıÊÇ%d\nËùÓĞ³¬¼¶ËØÊıÖ®ºÍÊÇ%d\n×î´óµÄ³¬¼¶ËØÊıÊÇ%d\n",sum,s,max);
+  printf("100åˆ°9999çš„è¶…çº§ç´ æ•°çš„ä¸ªæ•°æ˜¯%d\n100åˆ°9999çš„æ‰€æœ‰è¶…çº§ç´ æ•°ä¹‹å’Œæ˜¯%d\n100åˆ°9999çš„æœ€å¤§çš„è¶…çº§ç´ æ•°æ˜¯%d\n",sum,s,max);
   return 0;
 }
 int judge(int x){
